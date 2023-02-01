@@ -34,7 +34,7 @@ const database = {
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send(database.users);
     });
 
 app.listen(3000, () => {
@@ -60,6 +60,7 @@ app.listen(3000, () => {
             id: '125',
             name: name,
             email: email,
+            password: password,
             entries: 0,
             joined: new Date()
         })
